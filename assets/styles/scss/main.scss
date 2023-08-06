@@ -5,6 +5,11 @@ body {
   width: min(1440px, 375px);
   background-color: base.$very-dark-blue;
   margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 main {
@@ -59,7 +64,7 @@ main {
   .dash-card {
     width: 100%;
     height: 13rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     background-color: base.$dark-blue;
     display: flex;
     flex-direction: column;
@@ -76,17 +81,21 @@ main {
       justify-content: start;
       color: base.$pale-blue;
       padding-inline: 1.8rem;
-      border-radius: 1rem;
+      border-radius: 0.8rem;
       height: 10rem;
       gap: 1rem;
 
-      small {
-        font-size: 1rem;
+      @media (min-width: 1024px) {
+        height: 70%;
+        align-items: start;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-block-start: 2rem;
       }
 
       p {
-        font-size: 1.7rem;
-        line-height: 1.5;
+        font-size: 1.9rem;
+        line-height: 1.2;
         font-weight: base.$fw-light;
         color: base.$light;
       }
@@ -104,8 +113,17 @@ main {
       justify-content: space-around;
       padding-block: 1.5rem;
 
+      @media (min-width: 1024px) {
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-inline: 1.5rem;
+        align-items: start;
+        height: 30%;
+      }
+
       p {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: base.$fw-light;
       }
 
@@ -117,11 +135,14 @@ main {
   }
 
   .dash-card-text {
-    background-color: base.$dark-blue;
     height: 100%;
     width: 100%;
-    border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.8rem;
+    background-color: base.$dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .card-content {
       display: flex;
@@ -140,15 +161,28 @@ main {
       }
 
       .title {
-        font-size: 1.5rem;
+        font-size: base.$titles;
         font-weight: base.$fw-bold;
         color: base.$light;
       }
 
       .current-time {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: base.$fw-light;
         color: base.$light;
+      }
+
+      .previous-time {
+        font-size: 0.8rem;
+      }
+    }
+
+    .weekly {
+      @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
       }
     }
   }
