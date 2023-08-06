@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 375px;
+  background-color: hsl(226, 43%, 10%);
+  margin: 0 auto;
+}
+
+main {
+  color: hsl(236, 100%, 87%);
+  display: flex;
+  max-width: 375px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 2rem;
+  gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5em 1.5em;
+    grid-template-areas: "profile work play study" "profile exercise social self-care";
+  }
+  main .profile {
+    grid-area: profile;
+  }
+  main .work {
+    grid-area: work;
+  }
+  main .play {
+    grid-area: play;
+  }
+  main .study {
+    grid-area: study;
+  }
+  main .exercise {
+    grid-area: exercise;
+  }
+  main .social {
+    grid-area: social;
+  }
+  main .self-care {
+    grid-area: self-care;
+  }
+}
+main .dash-card {
+  width: 100%;
+  height: 13rem;
+  border-radius: 1rem;
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  main .dash-card {
+    width: 13rem;
+  }
+}
+main .dash-card header {
+  background-color: hsl(246, 80%, 60%);
+  display: inherit;
+  align-items: center;
+  justify-content: start;
+  color: hsl(236, 100%, 87%);
+  padding-inline: 1.8rem;
+  border-radius: 1rem;
+  height: 10rem;
+  gap: 1rem;
+}
+main .dash-card header small {
+  font-size: 1rem;
+}
+main .dash-card header p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: hsl(45, 29%, 97%);
+}
+main .dash-card header picture img {
+  width: 5rem;
+  border-radius: 2.5rem;
+  border: 0.2rem solid hsl(45, 29%, 97%);
+}
+main .dash-card .timeframes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 1.5rem;
+}
+main .dash-card .timeframes p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+main .dash-card .timeframes p:hover {
+  color: hsl(45, 29%, 97%);
+  cursor: pointer;
+}
+main .dash-card-text {
+  background-color: hsl(235, 46%, 20%);
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+main .dash-card-text .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .dash-card-text .card-content picture {
+  width: 1rem;
+  cursor: pointer;
+}
+main .dash-card-text .card-content picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .dash-card-text .card-content .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(45, 29%, 97%);
+}
+main .dash-card-text .card-content .current-time {
+  font-size: 2rem;
+  font-weight: 300;
+  color: hsl(45, 29%, 97%);
+}
+main .profile {
+  height: 100%;
+}
+main .work {
+  background: hsl(15, 100%, 70%) url("../../../images/icon-work.svg") 95% -8% no-repeat;
+  background-size: 21%;
+}
+main .play {
+  background: hsl(195, 74%, 62%) url("../../../images/icon-play.svg") 95% -4% no-repeat;
+  background-size: 21%;
+}
+main .study {
+  background: hsl(348, 100%, 68%) url("../../../images/icon-study.svg") 95% -6% no-repeat;
+  background-size: 21%;
+}
+main .exercise {
+  background: hsl(145, 58%, 55%) url("../../../images/icon-exercise.svg") 95% 0 no-repeat;
+  background-size: 21%;
+}
+main .social {
+  background: hsl(264, 64%, 52%) url("../../../images/icon-social.svg") 95% -13% no-repeat;
+  background-size: 21%;
+}
+main .self-care {
+  background: hsl(43, 84%, 65%) url("../../../images/icon-self-care.svg") 95% -6% no-repeat;
+  background-size: 18%;
+}
+main .work picture,
+main .play picture,
+main .study picture,
+main .exercise picture,
+main .social picture,
+main .self-care picture {
+  overflow: hidden;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: inherit;
+}
+
+/*# sourceMappingURL=styles.css.map */

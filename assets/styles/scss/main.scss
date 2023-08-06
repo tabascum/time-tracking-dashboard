@@ -1,0 +1,201 @@
+@use "base";
+
+body {
+  min-height: 100vh;
+  width: min(1440px, 375px);
+  background-color: base.$very-dark-blue;
+  margin: 0 auto;
+}
+
+main {
+  color: base.$pale-blue;
+  display: flex;
+  max-width: 375px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 2rem;
+  gap: 1.5rem;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5em 1.5em;
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self-care";
+
+    .profile {
+      grid-area: profile;
+    }
+
+    .work {
+      grid-area: work;
+    }
+
+    .play {
+      grid-area: play;
+    }
+
+    .study {
+      grid-area: study;
+    }
+
+    .exercise {
+      grid-area: exercise;
+    }
+
+    .social {
+      grid-area: social;
+    }
+
+    .self-care {
+      grid-area: self-care;
+    }
+  }
+
+  .dash-card {
+    width: 100%;
+    height: 13rem;
+    border-radius: 1rem;
+    background-color: base.$dark-blue;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    @media (min-width: 1024px) {
+      width: 13rem;
+    }
+
+    header {
+      background-color: base.$blue;
+      display: inherit;
+      align-items: center;
+      justify-content: start;
+      color: base.$pale-blue;
+      padding-inline: 1.8rem;
+      border-radius: 1rem;
+      height: 10rem;
+      gap: 1rem;
+
+      small {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+        line-height: 1.5;
+        font-weight: base.$fw-light;
+        color: base.$light;
+      }
+
+      picture img {
+        width: 5rem;
+        border-radius: 2.5rem;
+        border: 0.2rem solid base.$light;
+      }
+    }
+
+    .timeframes {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-block: 1.5rem;
+
+      p {
+        font-size: 1.3rem;
+        font-weight: base.$fw-light;
+      }
+
+      p:hover {
+        color: base.$light;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dash-card-text {
+    background-color: base.$dark-blue;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      picture {
+        width: 1rem;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: base.$fw-bold;
+        color: base.$light;
+      }
+
+      .current-time {
+        font-size: 2rem;
+        font-weight: base.$fw-light;
+        color: base.$light;
+      }
+    }
+  }
+
+  .profile {
+    height: 100%;
+  }
+
+  .work {
+    background: base.$light-red url("../../../images/icon-work.svg") 95% -8% no-repeat;
+    background-size: 21%;
+  }
+
+  .play {
+    background: base.$soft-blue url("../../../images/icon-play.svg") 95% -4% no-repeat;
+    background-size: 21%;
+  }
+  .study {
+    background: base.$light-blue url("../../../images/icon-study.svg") 95% -6% no-repeat;
+    background-size: 21%;
+  }
+  .exercise {
+    background: base.$lime-green url("../../../images/icon-exercise.svg") 95% 0
+      no-repeat;
+    background-size: 21%;
+  }
+  .social {
+    background: base.$violet url("../../../images/icon-social.svg") 95% -13% no-repeat;
+    background-size: 21%;
+  }
+  .self-care {
+    background: base.$soft-orange url("../../../images/icon-self-care.svg") 95% -6%
+      no-repeat;
+    background-size: 18%;
+  }
+
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    picture {
+      overflow: hidden;
+      height: 3.5rem;
+      border-radius: 1rem;
+      display: inherit;
+    }
+  }
+}
