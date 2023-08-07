@@ -127,8 +127,9 @@ main {
         font-weight: base.$fw-light;
       }
 
-      p:hover {
+      p.active {
         color: base.$light;
+        font-weight: base.$fw-normal;
         cursor: pointer;
       }
     }
@@ -177,7 +178,7 @@ main {
       }
     }
 
-    .weekly {
+    .card-data {
       @media (min-width: 1024px) {
         display: flex;
         flex-direction: column;
@@ -225,11 +226,35 @@ main {
   .exercise,
   .social,
   .self-care {
+    @media (min-width: 1024px) {
+      background-size: 35%;
+      background-position: 92% -6%;
+    }
+
     picture {
       overflow: hidden;
       height: 3.5rem;
       border-radius: 1rem;
       display: inherit;
+    }
+  }
+
+  .exercise {
+    @media (min-width: 1024px) {
+      background-size: 35%;
+      background-position: 92% 0%;
+    }
+  }
+  .social {
+    @media (min-width: 1024px) {
+      background-size: 35%;
+      background-position: 92% -12%;
+    }
+  }
+
+  .self-care {
+    @media (min-width: 1024px) {
+      background-size: 28%;
     }
   }
 }

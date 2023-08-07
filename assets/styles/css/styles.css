@@ -127,8 +127,9 @@ main .dash-card .timeframes p {
   font-size: 1rem;
   font-weight: 300;
 }
-main .dash-card .timeframes p:hover {
+main .dash-card .timeframes p.active {
   color: hsl(45, 29%, 97%);
+  font-weight: 400;
   cursor: pointer;
 }
 main .dash-card-text {
@@ -169,7 +170,7 @@ main .dash-card-text .card-content .previous-time {
   font-size: 0.8rem;
 }
 @media (min-width: 1024px) {
-  main .dash-card-text .weekly {
+  main .dash-card-text .card-data {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -203,6 +204,17 @@ main .self-care {
   background: hsl(43, 84%, 65%) url("../../../images/icon-self-care.svg") 95% -6% no-repeat;
   background-size: 18%;
 }
+@media (min-width: 1024px) {
+  main .work,
+  main .play,
+  main .study,
+  main .exercise,
+  main .social,
+  main .self-care {
+    background-size: 35%;
+    background-position: 92% -6%;
+  }
+}
 main .work picture,
 main .play picture,
 main .study picture,
@@ -213,6 +225,23 @@ main .self-care picture {
   height: 3.5rem;
   border-radius: 1rem;
   display: inherit;
+}
+@media (min-width: 1024px) {
+  main .exercise {
+    background-size: 35%;
+    background-position: 92% 0%;
+  }
+}
+@media (min-width: 1024px) {
+  main .social {
+    background-size: 35%;
+    background-position: 92% -12%;
+  }
+}
+@media (min-width: 1024px) {
+  main .self-care {
+    background-size: 28%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
