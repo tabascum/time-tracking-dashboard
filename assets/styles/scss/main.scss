@@ -188,6 +188,10 @@ main {
     }
   }
 
+  .dash-card-text:hover {
+    background-color: base.$desaturated-blue;
+  }
+
   .profile {
     height: 100%;
   }

@@ -177,6 +177,9 @@ main .dash-card-text .card-content .previous-time {
     gap: 0.3rem;
   }
 }
+main .dash-card-text:hover {
+  background-color: hsl(235, 45%, 61%);
+}
 main .profile {
   height: 100%;
 }
